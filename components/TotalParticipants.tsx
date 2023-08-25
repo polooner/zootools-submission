@@ -102,7 +102,12 @@ const TotalParticipants = (props: ChartProps) => {
               return Array.from({ length: 8 }, (_, i) => i * interval);
             }}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip
+            allowEscapeViewBox={{ x: true, y: true }}
+            position={{ y: -50 }}
+            cursor={false}
+            content={<CustomTooltip />}
+          />
           <Bar
             shape={<RectangleBar />}
             dataKey='uv'
